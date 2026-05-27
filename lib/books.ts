@@ -52,7 +52,6 @@ export function getRecentBooks(limit = 12): Book[] {
 }
 
 export function getPopularBooks(limit = 8): Book[] {
-  // Tanpa database, sort berdasarkan tahun terbit terlama (klasik populer)
   return getAllBooks()
     .filter((b) => b.published_year)
     .sort((a, b) => (a.published_year ?? 9999) - (b.published_year ?? 9999))
@@ -68,19 +67,16 @@ export function getCategoryCounts(): Record<string, number> {
   return counts
 }
 
-// Split konten markdown per bab (setiap ## heading = 1 bab)
 export function splitIntoChapters(content: string): string[] {
   const parts = content.split(/^(?=## )/m).filter(Boolean)
   return parts
 }
 
-// Estimasi waktu baca berdasarkan word count
 export function estimateReadingTime(content: string): number {
   const wordCount = content.split(/\s+/).filter(Boolean).length
   return Math.max(1, Math.ceil(wordCount / 200))
 }
 
-// Generate slug dari judul dan nama belakang penulis
 export function generateSlug(title: string, author: string): string {
   const lastName = author.split(' ').pop() ?? author
   const titleSlug = title
@@ -94,25 +90,5 @@ export function generateSlug(title: string, author: string): string {
   return `${titleSlug}-${authorSlug}`
 }
 
-// Konstanta sistem
-export const SYSTEM_CONSTANTS = {
-  MAX_BOOKS_PER_CRON: 5,
-  COVER_MAX_SIZE_KB: 150,
-  COVER_WIDTH: 300,
-  COVER_HEIGHT: 450,
-  READER_MAX_WIDTH: 720,
-  CATEGORY_PANEL_WIDTH: 240,
-  ISR_REVALIDATE: 3600,
-  SEARCH_DEBOUNCE_MS: 300,
-  READING_SPEED_WPM: 200,
-} as const
-
-// localStorage/sessionStorage keys
-export const STORAGE_KEYS = {
-  bookmark: (slug: string) => `bookmark:${slug}`,
-  readingProgress: (slug: string) => `reading-progress:${slug}`,
-  fontSizeReader: 'reader-font-size',
-  donationBannerDismissed: 'donation-banner-dismissed',
-  supportModalShown: 'support_modal_shown',
-  themePreference: 'theme',
-} as const
+// CATATAN: SYSTEM_CONSTANTS dan STORAGE_KEYS ada di lib/constants.ts
+// Import dari sana langsung untuk client components.

@@ -6,7 +6,7 @@ import { FiSearch, FiX } from 'react-icons/fi'
 import { Book } from '@/types/book'
 import { buildSearchIndex, searchBooks } from '@/lib/search'
 import { BookGrid } from './BookGrid'
-import { SYSTEM_CONSTANTS } from '@/lib/books'
+import { SYSTEM_CONSTANTS } from '@/lib/constants'
 
 interface SearchClientProps {
   allBooks: Book[]

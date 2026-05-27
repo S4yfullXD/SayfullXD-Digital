@@ -1,6 +1,7 @@
 // app/kategori/[slug]/page.tsx
 import { notFound } from 'next/navigation'
-import { getBooksByCategory, getCategoryCounts, SYSTEM_CONSTANTS } from '@/lib/books'
+import { getBooksByCategory, getCategoryCounts } from '@/lib/books'
+import { SYSTEM_CONSTANTS } from '@/lib/constants'
 import { ALL_CATEGORIES, CATEGORY_META, BookCategory } from '@/types/book'
 import { BookGrid } from '@/components/books/BookGrid'
 import { CategoryPanel } from '@/components/layout/CategoryPanel'

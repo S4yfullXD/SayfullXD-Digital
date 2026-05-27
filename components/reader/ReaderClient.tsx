@@ -9,7 +9,7 @@ import { BookmarkButton } from '@/components/books/BookmarkButton'
 import { ShareButton } from '@/components/ui/ShareButton'
 import { SupportModal } from '@/components/ui/SupportModal'
 import { AdBanner } from '@/components/ui/AdBanner'
-import { STORAGE_KEYS } from '@/lib/books'
+import { STORAGE_KEYS } from '@/lib/constants'
 import { ReadingProgress } from '@/types/book'
 
 interface ReaderClientProps {

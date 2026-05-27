@@ -1,7 +1,8 @@
 // app/buku/[slug]/baca/page.tsx
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { getAllBooks, getBookBySlug, splitIntoChapters, SYSTEM_CONSTANTS } from '@/lib/books'
+import { getAllBooks, getBookBySlug, splitIntoChapters } from '@/lib/books'
+import { SYSTEM_CONSTANTS } from '@/lib/constants'
 import { ReaderClient } from '@/components/reader/ReaderClient'
 import { FiArrowLeft } from 'react-icons/fi'
 import type { Metadata } from 'next'

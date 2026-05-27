@@ -1,5 +1,6 @@
 // app/katalog/page.tsx
-import { getAllBooks, getCategoryCounts, SYSTEM_CONSTANTS } from '@/lib/books'
+import { getAllBooks, getCategoryCounts } from '@/lib/books'
+import { SYSTEM_CONSTANTS } from '@/lib/constants'
 import { BookGrid } from '@/components/books/BookGrid'
 import { CategoryPanel } from '@/components/layout/CategoryPanel'
 import { AdBanner } from '@/components/ui/AdBanner'

@@ -1,7 +1,8 @@
 // app/page.tsx
 import Link from 'next/link'
 import { FiArrowRight, FiBookOpen, FiDownload, FiUsers } from 'react-icons/fi'
-import { getRecentBooks, getPopularBooks, getCategoryCounts, SYSTEM_CONSTANTS } from '@/lib/books'
+import { getRecentBooks, getPopularBooks, getCategoryCounts } from '@/lib/books'
+import { SYSTEM_CONSTANTS } from '@/lib/constants'
 import { BookGrid } from '@/components/books/BookGrid'
 import { CategoryPanel } from '@/components/layout/CategoryPanel'
 import { AdBanner } from '@/components/ui/AdBanner'

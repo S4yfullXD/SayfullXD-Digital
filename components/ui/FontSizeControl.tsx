@@ -1,7 +1,7 @@
 'use client'
 // components/ui/FontSizeControl.tsx
 import { useState, useEffect } from 'react'
-import { STORAGE_KEYS } from '@/lib/books'
+import { STORAGE_KEYS } from '@/lib/constants'
 
 type FontSize = 'S' | 'M' | 'L' | 'XL'
 

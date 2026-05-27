@@ -2,7 +2,7 @@
 // components/ui/SupportModal.tsx
 import { useEffect } from 'react'
 import { FiX } from 'react-icons/fi'
-import { STORAGE_KEYS } from '@/lib/books'
+import { STORAGE_KEYS } from '@/lib/constants'
 
 interface SupportModalProps {
   onClose: () => void

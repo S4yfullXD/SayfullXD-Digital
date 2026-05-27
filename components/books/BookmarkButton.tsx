@@ -2,7 +2,7 @@
 // components/books/BookmarkButton.tsx
 import { useState, useEffect } from 'react'
 import { FiBookmark } from 'react-icons/fi'
-import { STORAGE_KEYS } from '@/lib/books'
+import { STORAGE_KEYS } from '@/lib/constants'
 import { Bookmark } from '@/types/book'
 
 interface BookmarkButtonProps {

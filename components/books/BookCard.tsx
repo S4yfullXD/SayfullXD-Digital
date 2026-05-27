@@ -7,7 +7,7 @@ import { Book } from '@/types/book'
 import { CategoryBadge } from '@/components/ui/CategoryBadge'
 import { ShareButton } from '@/components/ui/ShareButton'
 import { useState, useEffect } from 'react'
-import { STORAGE_KEYS } from '@/lib/books'
+import { STORAGE_KEYS } from '@/lib/constants'
 
 interface BookCardProps {
   book: Book

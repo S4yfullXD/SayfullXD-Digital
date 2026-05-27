@@ -3,7 +3,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { fetchGutenberg, fetchBookContent, convertToMarkdown, generateMarkdownFile } from '@/lib/sources/gutenberg'
 import { fileExists, uploadFile } from '@/lib/github'
-import { SYSTEM_CONSTANTS } from '@/lib/books'
+import { SYSTEM_CONSTANTS } from '@/lib/constants'
 
 const delay = (ms: number) => new Promise((res) => setTimeout(res, ms))
 
