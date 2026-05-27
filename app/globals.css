@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-outfit: 'Outfit', sans-serif;
+    --font-lora: 'Lora', serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-slate-900 font-sans antialiased;
+    @apply dark:bg-dark-bg dark:text-slate-100;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  * {
+    @apply border-slate-200 dark:border-dark-border;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Reader font sizes */
+  .reader-font-s { font-size: 15px; line-height: 1.75; }
+  .reader-font-m { font-size: 17px; line-height: 1.80; }
+  .reader-font-l { font-size: 19px; line-height: 1.85; }
+  .reader-font-xl { font-size: 21px; line-height: 1.90; }
+
+  /* Snap for horizontal scroll */
+  .snap-x { scroll-snap-type: x mandatory; }
+  .snap-start { scroll-snap-align: start; }
+
+  /* Category panel item */
+  .category-item {
+    @apply flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium
+           text-slate-600 dark:text-slate-400 cursor-pointer
+           transition-all duration-150 select-none;
+  }
+  .category-item:hover {
+    @apply bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100;
+  }
+  .category-item.active {
+    @apply bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 font-semibold;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
